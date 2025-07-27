@@ -45,7 +45,7 @@ body {
 }
 
 @media (max-width: 768px) {
-    #menu {
+    .navbar{
         display: none;
     }
     
