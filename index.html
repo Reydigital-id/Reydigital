@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Tambahkan animasi framer motion-like pakai Tailwind -->
+    <style>
+      @keyframes fadeInUp {
+        0% {
+          opacity: 0;
+          transform: translateY(40px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .animate-fade-in-up {
+        animation: fadeInUp 1s ease-out forwards;
+      }
+
+      .delay-1 {
+        animation-delay: 0.3s;
+      }
+      .delay-2 {
+        animation-delay: 0.6s;
+      }
+    </style>
+  </head>
+  <body class="bg-gradient-to-br from-[#eaf3ff] to-[#d4e9ff] px-6">
+    <nav class="navbar-nav" class="fixed w-full top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+          <!-- Logo -->
+          <div class="flex-shrink-0 flex items-center">
+            <a href="#" class="text-xl font-bold text-blue-600"
+              >ReyDigital.id</a
+            >
+          </div>
+
+          <!-- Menu Links -->
+          <div
+            class="navbar"
+            class="hidden md:flex items-center space-x-6"
+          >
+            <a
+              href="#home"
+              class="text-gray-700 hover:text-blue-600 font-medium"
+              >Home</a
+            >
+            <a
+              href="#services"
+              class="text-gray-700 hover:text-blue-600 font-medium"
+              >Layanan</a
+            >
+            <a
+              href="#portfolio"
+              class="text-gray-700 hover:text-blue-600 font-medium"
+              >Portofolio</a
+            >
+            <a
+              href="#about"
+              class="text-gray-700 hover:text-blue-600 font-medium"
+              >Tentang</a
+            >
+            <a
+              href="#contact"
+              class="text-gray-700 hover:text-blue-600 font-medium"
+              >Kontak</a
+            >
+          </div>
+
+          <!-- Tombol CTA -->
+          <div class="hidden md:flex items-center">
+            <a
+              href="https://wa.me/628XXXXXXXXXX"
+              target="_blank"
+              class="bg-blue-600 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-700 transition"
+              >Chat Sekarang</a
+            >
+          </div>
+
+          <!-- Hamburger Menu Mobile -->
+          <div class="md:hidden flex items-center">
+            <a
+              id="menu"
+              class="text-gray-700 focus:outline-none"
+            >
+              ☰
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <!-- <div class='mobile-menu' id="mobile-menu" class="md:hidden hidden px-4 pb-4">
+        <a href="#home" class="block py-2 text-gray-700 hover:text-blue-600"
+          >Home</a
+        >
+        <a href="#services" class="block py-2 text-gray-700 hover:text-blue-600"
+          >Layanan</a
+        >
+        <a
+          href="#portfolio"
+          class="block py-2 text-gray-700 hover:text-blue-600"
+          >Portofolio</a
+        >
+        <a href="#about" class="block py-2 text-gray-700 hover:text-blue-600"
+          >Tentang</a
+        >
+        <a href="#contact" class="block py-2 text-gray-700 hover:text-blue-600"
+          >Kontak</a
+        >
+      </div> -->
+    </nav>
+    <header
+      class="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#eaf3ff] to-[#d4e9ff] px-6"
+    >
+      <div
+        class="max-w-7xl w-full text-center md:text-left flex flex-col md:flex-row items-center gap-12"
+      >
+        <!-- LOGO -->
+        <div class="md:w-1/2 w-full flex justify-center md:justify-end">
+          <img
+            src="img/logo3d.png"
+            alt="Logo ReyDigital.id"
+            class="w-100% h-auto drop-shadow-xl animate-fade-in-up delay-1 mt-2"
+            class="img-logo"
+          />
+        </div>
+
+        <!-- TEXT -->
+        <div class="md:w-1/2 w-full animate-fade-in-up delay-2">
+          <h1
+            class="text-4xl md:text-5xl font-extrabold leading-tight text-gray-800 mb-4"
+          >
+            Bangun Brand Kamu<br /><span class="text-blue-600"
+              >Bersama ReyDigital.id</span
+            >
+          </h1>
+          <p class="text-lg text-gray-600 mb-6">
+            Kami siap bantu kamu dengan layanan
+            <span class="font-semibold">desain poster digital</span> dan
+            <span class="font-semibold">pembuatan website</span> yang elegan &
+            responsif.
+          </p>
+          <div
+            class="flex flex-col md:flex-row gap-4 justify-center md:justify-start"
+          >
+            <a
+              href="#portfolio"
+              class="bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700 transition"
+            >
+              Lihat Portofolio
+            </a>
+            <a
+              href="https://wa.me/628XXXXXXXXXX"
+              target="_blank"
+              class="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50 transition"
+            >
+              Konsultasi Gratis
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section id="services" class="bg-[#f0f6ff] py-24">
+      <div class="max-w-7xl mx-auto px-6">
+        <!-- Judul Section -->
+        <div class="text-center mb-20">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800">
+            Layanan Kami
+          </h2>
+          <p class="text-gray-600 mt-2">
+            Solusi kreatif dan profesional untuk membangun brand digitalmu
+          </p>
+        </div>
+
+        <!-- Grid Layanan -->
+        <div class="space-y-24">
+          <!-- 1. Desain Poster UMKM -->
+          <div class="flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2 w-full group">
+              <img
+                src="assets/poster-umkm.jpg"
+                alt="Poster UMKM"
+                class="rounded-xl shadow-md w-full transform transition duration-300 group-hover:scale-105 group-hover:shadow-xl"
+              />
+            </div>
+            <div class="md:w-1/2 w-full px-2">
+              <h3 class="text-2xl font-semibold text-gray-800 mb-4">
+                Desain Poster UMKM & Bisnis
+              </h3>
+              <p class="text-gray-600 mb-6">
+                Buat usahamu lebih menonjol dengan poster profesional untuk
+                promosi produk, campaign, atau promo sosial media.
+              </p>
+              <a
+                href="https://wa.me/628XXXXXXXXXX"
+                target="_blank"
+                class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700 transition"
+                >Pesan Sekarang</a
+              >
+            </div>
+          </div>
+
+          <!-- 2. Poster Film/Event -->
+          <div class="flex flex-col md:flex-row-reverse items-center gap-12">
+            <div class="md:w-1/2 w-full group">
+              <img
+                src="assets/poster-event.jpg"
+                alt="Poster Film"
+                class="rounded-xl shadow-md w-full transform transition duration-300 group-hover:scale-105 group-hover:shadow-xl"
+              />
+            </div>
+            <div class="md:w-1/2 w-full px-2">
+              <h3 class="text-2xl font-semibold text-gray-800 mb-4">
+                Desain Poster Film & Event
+              </h3>
+              <p class="text-gray-600 mb-6">
+                Poster sinematik dan estetis untuk promosi event, film pendek,
+                konser, atau kegiatan komunitas kamu.
+              </p>
+              <a
+                href="https://wa.me/628XXXXXXXXXX"
+                target="_blank"
+                class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700 transition"
+                >Pesan Sekarang</a
+              >
+            </div>
+          </div>
+
+          <!-- 3. Cover Buku -->
+          <div class="flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2 w-full group">
+              <img
+                src="assets/cover-buku.jpg"
+                alt="Cover Buku"
+                class="rounded-xl shadow-md w-full transform transition duration-300 group-hover:scale-105 group-hover:shadow-xl"
+              />
+            </div>
+            <div class="md:w-1/2 w-full px-2">
+              <h3 class="text-2xl font-semibold text-gray-800 mb-4">
+                Desain Cover Buku
+              </h3>
+              <p class="text-gray-600 mb-6">
+                Cover buku yang profesional dan menarik pembaca, cocok untuk
+                penulis indie, buku anak, hingga e-book digital.
+              </p>
+              <a
+                href="https://wa.me/628XXXXXXXXXX"
+                target="_blank"
+                class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700 transition"
+                >Pesan Sekarang</a
+              >
+            </div>
+          </div>
+
+          <!-- 4. Desain UI/UX -->
+          <div class="flex flex-col md:flex-row-reverse items-center gap-12">
+            <div class="md:w-1/2 w-full group">
+              <img
+                src="assets/uiux.jpg"
+                alt="Desain UI UX"
+                class="rounded-xl shadow-md w-full transform transition duration-300 group-hover:scale-105 group-hover:shadow-xl"
+              />
+            </div>
+            <div class="md:w-1/2 w-full px-2">
+              <h3 class="text-2xl font-semibold text-gray-800 mb-4">
+                Desain UI/UX Website
+              </h3>
+              <p class="text-gray-600 mb-6">
+                Tingkatkan daya tarik websitemu dengan desain UI/UX modern dan
+                ramah pengguna. Bikin tampilan website kamu jauh lebih keren!
+              </p>
+              <a
+                href="https://wa.me/628XXXXXXXXXX"
+                target="_blank"
+                class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700 transition"
+                >Pesan Sekarang</a
+              >
+            </div>
+          </div>
+
+          <!-- 5. Website Landing Page -->
+          <div class="flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2 w-full group">
+              <img
+                src="assets/landing-page.jpg"
+                alt="Landing Page"
+                class="rounded-xl shadow-md w-full transform transition duration-300 group-hover:scale-105 group-hover:shadow-xl"
+              />
+            </div>
+            <div class="md:w-1/2 w-full px-2">
+              <h3 class="text-2xl font-semibold text-gray-800 mb-4">
+                Pembuatan Website Landing Page
+              </h3>
+              <p class="text-gray-600 mb-6">
+                Landing page interaktif untuk meningkatkan daya tarik produkmu
+                secara online. Desain clean, mobile-friendly, dan cepat diakses.
+              </p>
+              <a
+                href="https://wa.me/628XXXXXXXXXX"
+                target="_blank"
+                class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700 transition"
+                >Pesan Sekarang</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="portfolio" class="bg-[#f0f6ff] py-16 px-4 text-black">
+      <div class="max-w-6xl mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-12">Portofolio Kami</h2>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Poster Design -->
+          <div class="group">
+            <img
+              src="img/poster.jpeg"
+              alt="Desain Poster"
+              class="rounded-lg shadow-lg transform group-hover:scale-105 transition duration-300 w-30%"
+            />
+            <p class="mt-4 font-semibold text-lg">Desain Poster</p>
+          </div>
+
+          <!-- Book Cover -->
+          <div class="group">
+            <img
+              src="img/logo3d.png"
+              alt="Desain Cover Buku"
+              class="rounded-lg shadow-lg transform group-hover:scale-105 transition duration-300"
+            />
+            <p class="mt-4 font-semibold text-lg">Desain Cover Buku</p>
+          </div>
+
+          <!-- Website Design -->
+          <div class="group">
+            <a
+              href="https://reydigital-id.github.io/Website-Rehnvim/"
+              target="_blank"
+            >
+              <img
+                src="img/web.jpeg"
+                alt="Desain Website"
+                class="rounded-lg shadow-lg transform group-hover:scale-105 transition duration-300"
+              />
+            </a>
+            <p class="mt-4 font-semibold text-lg">Desain Website</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION ABOUT US -->
+    <section id="about" class="bg-[#f0f6ff] text-black py-20 px-6">
+      <div
+        class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12"
+      >
+        <!-- Gambar -->
+        <div class="w-full md:w-1/2">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/6140/6140110.png"
+            alt="Tentang Reydigital.id"
+            class="w-full rounded-xl shadow-lg"
+          />
+        </div>
+
+        <!-- Teks -->
+        <div class="w-full md:w-1/2 space-y-6">
+          <h2 class="text-3xl font-bold text-black">Tentang Reydigital.id</h2>
+          <p class="text-gray-700 leading-relaxed">
+            <strong>Reydigital.id</strong> adalah partner kreatif terpercaya
+            yang menyediakan berbagai jasa desain dan pengembangan digital untuk
+            membantu kamu membangun branding bisnis yang kuat, menarik, dan
+            profesional. Kami hadir untuk memberikan solusi visual dan teknologi
+            terbaik, mulai dari desain poster, desain UI/UX, hingga pembuatan
+            website yang elegan dan responsif.
+          </p>
+          <p class="text-gray-700">
+            Kami berkomitmen untuk menghadirkan layanan berkualitas tinggi,
+            mendengarkan kebutuhan klien dengan seksama, serta memberikan hasil
+            yang sesuai dengan visi dan identitas merekmu. Bersama
+            Reydigital.id, naikkan level bisnismu ke tahap selanjutnya!
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- SECTION KONTAK -->
+    <section id="contact" class="bg-[#f0f5ff] text-black py-16 px-4">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-8">Kontak Kami</h2>
+        <p class="mb-12 text-gray-700">
+          Hubungi kami untuk konsultasi atau kerja sama.
+        </p>
+
+        <div class="space-y-6">
+          <!-- Email -->
+          <a
+            href="mailto:reydigital.id@gmail.com"
+            class="flex items-center justify-center gap-4 text-lg hover:text-blue-400 transition"
+          >
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/732/732200.png"
+              alt="email"
+              class="w-6 h-6"
+            />
+            reydigital.id@gmail.com
+          </a>
+
+          <!-- Instagram -->
+          <a
+            href="https://instagram.com/reydigital.id"
+            target="_blank"
+            class="flex items-center justify-center gap-4 text-lg hover:text-pink-500 transition"
+          >
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/174/174855.png"
+              alt="Instagram"
+              class="w-6 h-6"
+            />
+            @reydigital.id
+          </a>
+
+          <!-- WhatsApp -->
+          <a
+            href="https://wa.me/6281234567890?text=Halo%20Reydigital%2C%20saya%20tertarik%20dengan%20jasa%20Anda"
+            target="_blank"
+            class="flex items-center justify-center gap-4 text-lg hover:text-green-400 transition"
+          >
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/733/733585.png"
+              alt="WhatsApp"
+              class="w-6 h-6"
+            />
+            +62 812-3456-7890
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+<footer class="bg-[] text-black py-10">
+  <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+
+    <!-- Logo -->
+    <a href="#home" class="flex items-center gap-2 hover:opacity-80 transition">
+      <img src="https://cdn-icons-png.flaticon.com/512/660/660611.png" alt="Reydigital Logo" class="w-10 h-10" />
+      <span class="text-lg font-semibold">Reydigital.id</span>
+    </a>
+
+    <!-- Navigasi -->
+    <div class="flex flex-wrap gap-6 text-sm text-gray-700">
+      <a href="#services" class="hover:text-gray-300 transition">Layanan</a>
+      <a href="#portfolio" class="hover:text-gray-300 transition">Portofolio</a>
+      <a href="#about" class="hover:text-gray-300 transition">Tentang Kami</a>
+      <a href="#contact" class="hover:text-gray-300 transition">Kontak</a>
+    </div>
+
+    <!-- Credit -->
+    <p class="text-xs text-gray-500 text-center md:text-right">
+      © 2025 Reydigital.id. All rights reserved.
+    </p>
+  </div>
+</footer>
+
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      const navbar = document.querySelector(".navbar-x");
+
+      // ketika menu diklik
+      document.querySelector("#menu").onclick = () => {
+        navbar.classList.toggle("active");
+      };
+
+      // klik diluar sidebar
+
+      const menu = document.querySelector("#menu");
+
+      document.addEventListener("click", function (e) {
+        if (!menu.contains(e.target) && !navbarNav.contains(e.target)) {
+          navbar.classList.remove("active");
+        }
+      });
+    </script>
+  </body>
+</html>
