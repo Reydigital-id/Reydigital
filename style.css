@@ -46,7 +46,7 @@ body {
 
 @media (max-width: 768px) {
     #menu {
-        display: inline-block;
+        display: none;
     }
     
     .navbar-x {
